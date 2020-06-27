@@ -80,7 +80,7 @@ def download_images(img_urls, dest_dir):
     for index, url in enumerate(img_urls):
         image_name = 'img' + str(index)
         print('Retrieving {}'.format(url))
-        urlretrieve(url, dest_dir + "/" + image_name)
+        urlretrieve(url, dest_dir + '/' + image_name)
         index_html += '<img src={}></img>'.format(image_name)
     index_html += '</body></html>'
 
