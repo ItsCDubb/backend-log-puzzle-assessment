@@ -41,10 +41,11 @@ def read_urls(filename):
     url_list = create_urls(puzzle_urls)
     url_list = list(set(url_list))
     sorted_urls = sorted(url_list, key=return_last_word)
+
+
     def extract_host_name(url):
         """returns the host name from a given url"""
     host = re.findall(r'GET (\S+) HTTP', url)
-
     return sorted_urls
 
 def create_urls(urls):
